@@ -13,4 +13,13 @@ ignorePublish: false
 posting_campaign_uuid: null
 agreed_posting_campaign_term: false
 ---
-# new article body
+# コマンド一覧
+
+### 記事の投稿
+```
+npx qiita publish 記事のファイルのベース名
+```
+### 記事ファイルの内容を反映
+```
+npx qiita publish 記事ファイルのベース名 --force
+```
