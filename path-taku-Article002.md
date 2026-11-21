@@ -1,23 +1,26 @@
 ---
-title: AI勉強会【202611 AI Night】登壇レポート その１
+title: 【2026年11月 AI Night】登壇レポート その１
 tags:
   - AI
   - IIT
   - Claude
   - GAS
+  - Google Workspace
 private: false
-updated_at: ''
-id: null
-organization_url_name: https://path-taku.com/
+updated_at: '2026-11-21T16:49:38+09:00'
+id: b7e540f630cbf7ca07a6
+organization_url_name: null
 slide: false
-ignorePublish: true
+ignorePublish: false
+posting_campaign_uuid: null
+agreed_posting_campaign_term: false
 ---
 # はじめに
 
 <!-- この記事を書いた背景・目的、想定読者を書く -->
 
-この記事では、私が登壇＆ファシリテートしたAI事例共有会の発表内容について紹介します。<br>
-今回はGAS＋スプレッドシートを使った社内の会議調整ツールについてご紹介します。<br>
+この記事では、私が登壇＆ファシリテートしたAI事例共有会の発表内容について紹介します。
+今回はGAS＋スプレッドシートを使った社内の会議調整ツールについてご紹介します。
 記事は複数回に渡って投稿するつもりですので、今回はGUIベースでの作り方に焦点を当てていきます。
 
 ## 対象読者
@@ -26,6 +29,11 @@ ignorePublish: true
 - Google WorkSpaceを使いこなせていないと感じている方
 - 普段のモヤモヤを解消したい方
   
+## 作りたいもの
+以下のような会議調整アプリ
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/4338855/4ffb75fd-7cb4-4725-95c2-26c5a3bae493.png)
+
+
 ## 技術スタック
 
 - VSCodeを使ったことがある（次回以降）
@@ -51,7 +59,7 @@ ignorePublish: true
 
 ## 手順2：実装
 
-画面上部の 【拡張機能】 から 【Apps Script】を選択して開きます。<br>
+画面上部の 【拡張機能】 から 【Apps Script】を選択して開きます。
 以下のようにファイルを用意します。
 1. 名前を【コード.gs】から【Code.gs】に変更
 2. index.html
@@ -62,12 +70,11 @@ ignorePublish: true
 ※【Code.gs】以外の拡張子は【.html】で問題ありません。
 
 コードは以下を貼り付けてください。
-もちろん、AIに書いてもらいました。<br>
+もちろん、AIに書いてもらいました。
 効果的なプロンプト作成Tipsは次回以降に乞うご期待
 
 - Code.gs
-
-```javascript:sample.js
+```javascript
 /**
  * 会議日程調整ツール（Google Apps Script）
  *
@@ -263,7 +270,7 @@ function deleteResponse(name) {
 
 - index.html
 
-```javascript:sample.js
+```
 <!DOCTYPE html>
 <html>
   <head>
@@ -628,11 +635,11 @@ function deleteResponse(name) {
 
 # まとめ
 
-- ポイント1<br>
-  通常の静的サイトと同じファイル構成ではないこと。<br>
+- ポイント1
+  通常の静的サイトと同じファイル構成ではないこと。
   GAS特有の作り方。
-- ポイント2<br>
-  実行順序を考慮すること。<br>
+- ポイント2
+  実行順序を考慮すること。
   【Code.gs】を選択➡実行➡デプロイ
 
 # 参考
